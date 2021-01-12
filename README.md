@@ -19,7 +19,7 @@ A typical usage scenario would be:
 
 ## Requirements
 
-Python3.5 or higher
+Python3.5 or higher（<=3.8）
 
 ```bash
 pip install  -r requirements.txt
@@ -36,7 +36,7 @@ There are two ways of using Vision.
 1. Update your file path in "rcnn_predict.py"
 
 ```python
-model_predict("path/to/image.png", view=True)
+model_predict("path/to/close_popup_image.png", view=True)
 ```
 
 2. Run script and you will get the result
@@ -85,11 +85,11 @@ curl  http://localhost:9092/client/vision  -F "file=@path_to_image.png"
 
 Button image named 1_1.png:
 
-![](image/1_1.png)
+![](close_popup_image/1_1.png)
 
 Background image named 0_3.png:
 
-![](image/0_3.png)
+![](close_popup_image/0_3.png)
 
 1. There are some images in this repo for training.
 

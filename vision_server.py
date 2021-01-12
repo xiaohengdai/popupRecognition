@@ -13,7 +13,7 @@ def get_client_image():
     file = request.files['file']
     data = {
         "code": 0,
-        "data": model_predict(file.read(), view=False)
+        "data": model_predict(file.read(), view=True)
     }
     return jsonify(data)
 
@@ -27,4 +27,4 @@ def error(e):
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=9092)
+    app.run(host="0.0.0.0", port=9093,debug=True)#开启flask 的debug模式

@@ -7,7 +7,7 @@ def get_proposal(rects, img_shape):
     """
     get proposals with calculated shape
     :param rects: input rectangles
-    :param img_shape: image shape
+    :param img_shape: close_popup_image shape
     :return: proposals of calculated shape
     """
     rectangles = []
@@ -49,10 +49,10 @@ def merge_rectangle_contours(rectangle_contours):
 
 def get_roi_image(img, rectangle_contour):
     """
-    get image of contour area
-    :param img: input image
+    get close_popup_image of contour area
+    :param img: input close_popup_image
     :param rectangle_contour: input contour
-    :return: image of contour area with same type
+    :return: close_popup_image of contour area with same type
     """
     roi_image = img[rectangle_contour[0][1]:rectangle_contour[2][1],
                     rectangle_contour[0][0]:rectangle_contour[1][0]]
@@ -62,8 +62,8 @@ def get_roi_image(img, rectangle_contour):
 def get_rectangle_proposal(binary, img_shape, min_size):
     """
     get proposals by edge feature calculation
-    :param binary: input image of binary type
-    :param img_shape: input image shape
+    :param binary: input close_popup_image of binary type
+    :param img_shape: input close_popup_image shape
     :param min_size: min_size of proposal
     :return: proposals
     """
@@ -86,7 +86,7 @@ def get_pos(rec, scale):
     """
     get center position (x,y) reshaped by scale
     :param rec: rectangle
-    :param scale: image resize scale
+    :param scale: close_popup_image resize scale
     :return: reshaped position(x,y)
     """
     x = int((rec[0][0]+rec[1][0])/2/scale)
@@ -108,8 +108,8 @@ def get_label_pos(contour):
 
 def get_gray_score(binary):
     """
-    calculate binary image mean value of normalized array
-    :param binary: input binary image
+    calculate binary close_popup_image mean value of normalized array
+    :param binary: input binary close_popup_image
     :return: score between (0-1.0)
     """
     if len(binary.shape) > 2:
@@ -123,9 +123,9 @@ def get_gray_score(binary):
 
 def get_binary_image(image):
     """
-    convert 3d image to 1d image
-    :param image: input image
-    :return: 1d image of gray type and binary type
+    convert 3d close_popup_image to 1d close_popup_image
+    :param image: input close_popup_image
+    :return: 1d close_popup_image of gray type and binary type
     """
     img = image
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)

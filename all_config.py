@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 
 
-# image shape
+# close_popup_image shape
 IMG_ROW, IMG_COL = 50, 50
 
 # model train
@@ -12,8 +12,9 @@ epochs = 10
 # model name
 model_name = "model/trained_model_1.h5"
 
-# image path
-IMAGE_PATH = "image/"
+# close_popup_image path
+CLOSE_POPUP_IMAGE_PATH = "close_popup_image/"
+ABNORMAL_PAGE_IMAGE_PATH="abnormal_page_image/"
 # IMAGE_PATH = "ios_update/good/"
 TRAIN_PATH = "train/"
 # TRAIN_PATH = "ios_update/"

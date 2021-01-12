@@ -14,7 +14,7 @@ model._make_predict_function()
 def get_prediction(img_binary, rects):
     """
     predict roi of images, gives two scores for both class
-    :param img_binary: image of binary type
+    :param img_binary: close_popup_image of binary type
     :param rects: rects of proposals
     :return: rects,score list of rects
     """
@@ -34,8 +34,8 @@ def get_prediction(img_binary, rects):
 
 def image_view(image):
     """
-    view predicted image on window of cv2.show()
-    :param image: image to show
+    view predicted close_popup_image on window of cv2.show()
+    :param image: close_popup_image to show
     :return:
     """
     show_width = 320
@@ -51,8 +51,8 @@ def image_view(image):
 
 def get_proposals(img):
     """
-    show generated proposals on input image
-    :param img: input image
+    show generated proposals on input close_popup_image
+    :param img: input close_popup_image
     :return:
     """
     img = cv2.imread(img)
@@ -68,7 +68,7 @@ def get_proposals(img):
 
 def model_predict(img_file, view):
     """
-    :param img_file: image file path
+    :param img_file: close_popup_image file path
     :param view: true if you want show the result
     :return:
     """
@@ -105,15 +105,15 @@ def model_predict(img_file, view):
 
 
 """
-:parameter image path
+:parameter close_popup_image path
 """
 if __name__ == "__main__":
-    # res=model_predict("/Users/xiaoheng/Downloads/meituan/vision-ML/image.png", view=True)
-    # res = model_predict("/Users/xiaoheng/Downloads/meituan/vision-ML/image.png", view=True)
+    # res=model_predict("/Users/xiaoheng/Downloads/meituan/vision-ML/close_popup_image.png", view=True)
+    # res = model_predict("/Users/xiaoheng/Downloads/meituan/vision-ML/close_popup_image.png", view=True)
     start_time=time.time()
     print("开始识别时间start_time:",start_time)
-    res = model_predict("/Users/xiaoheng/Downloads/meituan/vision-ML/recognition_img/x弹窗_移动1.jpeg", view=True)
+    res = model_predict("/Users/xiaoheng/Downloads/meituan/ModelRecognition/recognition_img/close_popup/x弹窗_美团.jpeg", view=True)
     end_time=time.time()
     print("结束识别时间end_time:",end_time)
     print("识别时间time：",(end_time-start_time))
-    # get_proposals("image.png")
+    # get_proposals("close_popup_image.png")

@@ -13,22 +13,22 @@ import matplotlib.pyplot as plt
 from keras import regularizers
 
 
-# input image dimensions
+# input close_popup_image dimensions
 img_rows, img_cols = IMG_ROW, IMG_COL
 trained_model = model_name
 
 
 class Image(object):
     """
-    class for generate train image from user image in image folder
+    class for generate train close_popup_image from user close_popup_image in close_popup_image folder
     """
     def __init__(self):
-        self.image_path = IMAGE_PATH
+        self.image_path = CLOSE_POPUP_IMAGE_PATH
         self.train_path = TRAIN_PATH
 
     def get_augmentation(self):
         """
-        generate train image from image folder
+        generate train close_popup_image from close_popup_image folder
         :return:
         """
         cls_list = ["0", "1"]
@@ -164,7 +164,7 @@ def train_model():
 
 
 """
-if you want update train image, run Image().get_augmentation,
+if you want update train close_popup_image, run Image().get_augmentation,
 you will get a trained model by train_model()
 """
 if __name__ == "__main__":
